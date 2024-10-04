@@ -36,3 +36,4 @@ if(strlen($name) >= 3 && str_contains($mail, ".") && is_numeric($age)){
     </form>
 </body>
 </html>
+
