@@ -1,0 +1,12 @@
+.card{
+    height: 100px;
+    width: 100px;
+}
+
+.green{
+    background-color: green;
+}
+
+.gray{
+    background-color: gray;
+}
