@@ -11,7 +11,7 @@ function isPalindrome( $word ){
     // Controllo se è palindroma o meno
     $isPalindroma = '';
     for ($i = strlen($word )- 1 ; $i >= 0 ; $i--) { 
-        $isPalindroma .= $i;
+        $isPalindroma .= $word[$i];
     };
     
     if( $isPalindroma == $word){
