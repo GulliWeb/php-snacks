@@ -1,8 +1,8 @@
 <?php
-$word = 'txtWord';
+$word = ($_GET['txtWord']);
 
 //Funzione che verifica se la frase ricevuta in input dall'utente è palindroma
-function( $word ){
+function isPalindrome( $word ){
     // Controlli
     if($word == ''){
         echo('Attenzione, inserire una parola!');
@@ -11,7 +11,7 @@ function( $word ){
     // Controllo se è palindroma o meno
     $isPalindroma = '';
     for ($i = strlen($word )- 1 ; $i >= 0 ; $i--) { 
-        $isPalindroma += $i;
+        $isPalindroma .= $i;
     };
     
     if( $isPalindroma == $word){
@@ -19,6 +19,11 @@ function( $word ){
     } else{
         echo('La parola non è palindroma');
     };
+}
+
+// Chiamo la funzione se il campo word non è vuoto
+if ($word !== '') {
+    isPalindrome($word);
 }
 ?>
 
@@ -30,14 +35,12 @@ function( $word ){
     <title>PALINDROMA FUNCTION PHP</title>
 </head>
 <body>
-    <form action="">
+    <form action="" method="get">
         <label for="txtWord">Inserisci una parola</label>
         <input type="text" id="txtWord" name="txtWord">
-    </form>
-
-    <button type="submit">
-        Verifica se è palindroma!
-    </button>
-    
+        <button type="submit">
+            Verifica se è palindroma!
+        </button>
+    </form> 
 </body>
 </html>
